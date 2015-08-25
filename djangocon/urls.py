@@ -1,5 +1,5 @@
 """
-Definition of urls for DjangoWebProject.
+Definition of urls for djangocon.
 """
 
 from datetime import datetime

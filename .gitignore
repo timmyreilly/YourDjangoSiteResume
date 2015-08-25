@@ -9,10 +9,14 @@ __pycache__/
 /bin/
 /obj/
 
-# User-specific files
+# Visual studio & User-specific files
 *.suo
 *.user
 *.sln.docstates
+.vs
+*.sln
+*.pyproj
+ptvs_virtualenv_proxy.py
 
 # Auto-generated virtual environment
 /env/
