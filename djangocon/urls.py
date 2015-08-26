@@ -4,7 +4,6 @@ Definition of urls for djangocon.
 
 from datetime import datetime
 from django.conf.urls import patterns, url
-from app.forms import BootstrapAuthenticationForm
 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
