@@ -1,1 +1,2 @@
-django<2
+applicationinsights==0.10.0
+Django<2
