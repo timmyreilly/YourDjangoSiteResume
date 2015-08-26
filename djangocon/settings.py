@@ -29,8 +29,6 @@ DATABASES = {
     }
 }
 
-LOGIN_URL = '/login'
-
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -105,7 +103,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    # 'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -168,3 +166,11 @@ LOGGING = {
 
 # Specify the default test runner.
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
+
+# Import the local settings for the current machine
+try:
+    from djangocon.local_settings import *
+except Exception, e:
+	pass
+    # logging.debug("local_settings not found or contains errors(%s). Skipping local_settings.. " % e)
+

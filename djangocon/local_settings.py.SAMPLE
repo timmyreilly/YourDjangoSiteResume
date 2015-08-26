@@ -1,0 +1,4 @@
+from settings import DATABASES
+# DATABASES['default']['HOST'] = 'localhost'
+# DATABASES['default']['USER'] = 'admin'
+# DATABASES['default']['PASSWORD'] = 'admin'
