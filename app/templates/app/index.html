@@ -2,36 +2,147 @@
 
 {% block content %}
 
-<div class="jumbotron">
-    <h1>DjangoCon 2015</h1>
-    <p class="lead">Django is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+<h1>DjangoCon 2015 Microsoft deployment challenge</h1>
+<h2>Overview: Deploying your Django web apps on Microsoft Azure</h2>
+<p>Did you know Python applications can be hosted on Microsoft Azure, too? Yes, that means your Django apps (and Flask, Bottle, and more!). Microsoft Azure is about much more than just Windows and .NET.</p>
+<p>Microsoft Azure offers a wide array of creation, deployment and management capabilities through the Azure Management Portal, <a href="https://azure.microsoft.com/en-us/documentation/articles/xplat-cli/">x-plat CLI</a> (cross-platform, command-line interface), or PowerShell cmdlets.</p>
+<h2>The Challenge</h2>
+<ul>
+    <li>Clone this GitHub repo.</li>
+    <li>Run the app locally to confirm its working.</li>
+    <li>Modify with your own information.</li>
+    <li>Deploy the web app to Azure</li>
+    <li>That's it! You've completed the challenge. Stop by the Microsoft booth to get you custom, limited-run t-shirt!</li>
+</ul>
+
+<div class="note_box">
+    <span class="note-icon"></span>
+    <h5>TL;DR</h5> 
+    <p>You can actually just skip all of these steps by just forking the GitHub repo and deploying the app using the "easy" button. We get it. You're busy eating breakfast tacos, making new Django friends, and catching up with old ones. We won't hold it against you and you still get a t-shirt.</p>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            Django gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://www.djangobook.com/en/2.0/index.html">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
-        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Python Tools for Visual Studio</h2>
-        <p>
-            PTVS is a free, open source plugin that turns Visual Studio into a Python IDE 
-            with support for editing, browsing, IntelliSense, Azure remote debugging, 
-            profiling and more.
-        </p>
-        <p><a class="btn btn-default" href="http://pytools.codeplex.com">Learn more &raquo;</a></p>
-    </div>
-</div>
+
+
+<h3>Prerequisites</h3>
+<p></p>
+<p>To complete this challenge you'll need:</p>
+<ul>
+    <li>Azure account. Activate your Azure Pass now. (If you want to get started with Azure App Service before signing up for an Azure account, go to Try App Service, where you can immediately create a short-lived starter web app in App Service. No credit card required; no commitments.)</li>
+    <li>Windows, Mac or Linux</li>
+    <li>Python 2.7 or 3.4</li>
+    <li>setuptools, pip, virtualenv (Python 2.7 only)</li>
+    <li>Git and/or a GitHub account</li>
+    <li><a href="http://go.microsoft.com/fwlink/?linkid=517189&clcid=0x409" target="_blank">Python Tools 2.1 for Visual Studio</a> - This is optional, but a great tool for Windows developers.</li>
+</ul>
+
+<h2>Steps</h2>
+<p>These steps describes how to get started running Python on Azure Web Apps. Web Apps provides limited free hosting and rapid deployment, and you can use Python! As your app grows, you can switch to paid hosting, and you can also integrate with all of the other Azure services.</p>
+<p>This is DjangoCon, so you we'll be using the Django web framework, of course. You will create a web app from the Azure Marketplace, set up deployment via local Git or GitHub. Then you will run the application locally, make changes, commit and push them to Azure. We'll show how to do this from Windows or Mac/Linux. </p>
+
+<h3>Deploy the Web App to Azure</h3>
+
+<p>The first step in creating your app is to create a web app via the Azure Portal.</p>
+<ul>
+    <li>Log into the Azure Portal and click the NEW button in the top left corner.</li>
+    <li>Click Web + Mobile > Azure Marketplace > Web Apps.</li>
+    <li>Configure the new Django app, such as creating a new App Service plan and a new resource group for it. Then, click Create.</li>
+</ul>
+
+<h3>Clone the DjangoCon challenge repo and run locally</h3>
+<p>You have a few options here, but the simplest one is to simply clone the GitHub repo:</p>
+
+<pre><code>git clone https://github.com/atxryan/DjangoCon
+cd https://github.com/atxryan/DjangoCon</code></pre>
+
+<h3>Create virtual environment -- Command Line</h3>
+<p>We'll create a new virtual environment for development purposes (do not add it to the repository). Virtual environments in Python are not relocatable, so every developer working on the application will create their own locally.</p>
+
+For Python 2.7:
+<pre><code>python -m virtualenv env</code></pre>
+For Python 3.4:
+<pre><code>python -m venv env</code></pre>
+Install the external packages required by your application. In our case, the only requirement is Django. You can use the requirements.txt file at the root of the repository to install the packages in your virtual environment:
+<pre><code>env/bin/pip install -r requirements.txt</code></pre>
+
+<h3>Let's take a look at the app structure</h3>
+
+    <pre><code>- app
+    - static/app
+    - templates/app
+        - index.html
+        - layout.html
+- djangocon
+    - __init__.py
+    - local_settings.py.SAMPLE
+    - settings.py
+    - urls.py
+    - wsgi.py
+- .gitignore
+- db.sqlite3
+- manage.py
+- <b>ptvs_virtualenv_proxy.py</b>
+- readme.md
+- <b>requirements.txt</b>
+- <b>web.2.7.config</b>
+- <b>web.3.4.config</b>
+- web.debug.config</code>
+</pre>
+<p>It's a very basic Django app, with a few files you may not recognize. The following files are needed to deploy your Django application to Azure.</p>
+<p><strong>requirements.txt</strong> - External packages needed by this application. The deployment script will pip install the packages listed in this file.</p>
+<p><strong>ptvs_virtualenv_proxy.py</strong> - IIS proxy for virtual environments and PTVS remote debugging support.</p>
+<p><strong>Web.2.7.config</strong> and <strong>web.3.4.config</strong> - These are IIS configuration files. The deployment script will use the appropriate web.x.y.config and copy it as web.config.</p>
+
+<h3>Modify with your own information</h3>
+
+[TBD]
+
+<h3>Deploy the Web App to Azure</h3>
+<p>Configure Git publishing for your newly created web app by following the instructions at Continuous deployment using GIT in Azure App Service.</p>
+
+<pre><code>git remote add azure</code></pre>
+
+<h2>Additional resources</h2>
+
+<h3>Other Python web application frameworks</h3>
+<p>Find tutorials for <a href="https://azure.microsoft.com/en-us/documentation/articles/web-sites-python-create-deploy-flask-app/">Flask</a> and <a href="https://azure.microsoft.com/en-us/documentation/articles/web-sites-python-create-deploy-bottle-app/">Bottle</a> on the Microsoft Azure Documentation website.</p>
+
+<h3>Using a Database</h3>
+<p>The database that is included with the application is a sqlite database. This is a convenient and useful default database to use for development, as it requires almost no setup. The database is stored in the db.sqlite3 file in the project folder.</p>
+<p>Azure provides database services which are easy to use from a Django application. Tutorials for using <a href="https://azure.microsoft.com/en-us/documentation/articles/web-sites-python-ptvs-django-sql/">SQL Database</a> and <a href="https://azure.microsoft.com/en-us/documentation/articles/web-sites-python-ptvs-django-mysql/">MySQL</a> from a Django application show the steps necessary to create the database service, change the database settings in DjangoWebProject/settings.py, and the libraries required to install.</p>
+<p>If you prefer to manage your own database servers, you can do so using Windows or Linux virtual machines running on Azure.</p>
+
+<h3>Troubleshooting - Package Installation</h3>
+<p>Some packages may not install using pip when run on Azure. It may simply be that the package is not available on the Python Package Index. It could be that a compiler is required (a compiler is not available on the machine running the web app in Azure App Service).</p>
+<p>[link]</p>
+
+<h3>Customize installation</h3>
+<p>You can customize the deployment script to install a package in the virtual environment using an alternate installer, such as easy_install. See deploy.cmd for an example that is commented out. Make sure that such packages aren't listed in requirements.txt, to prevent pip from installing them.</p>
+
+<h3></h3>
+<p></p>
+[link to custom install]
+
+<h3>Python runtime</h3>
+<p> Azure will determine the version of Python to use for its virtual environment with the following priority:</p>
+<ol>
+    <li>version specified in runtime.txt in the root folder</li>
+    <li>version specified by Python setting in the web app configuration (the Settings > Application Settings blade for your web app in the Azure Portal)</li>
+    <li>python-2.7 is the default if none of the above are specified</li>
+</ol>
+
+<h3>Troubleshooting - Static Files</h3>
+<p></p>
+
+Django has the concept of collecting static files. This takes all the static files from their original location and copies them to a single folder. For this application, they are copied to /static.
+This is done because static files may come from different Django 'apps'. For example, the static files from the Django admin interfaces are located in a Django library subfolder in the virtual environment. Static files defined by this application are located in /app/static. As you use more Django 'apps', you'll have static files located in multiple places.
+When running the application in debug mode, the application serves the static files from their original location.
+When running the application in release mode, the application does not serve the static files. It is the responsibility of the web server to serve the files. For this application, IIS will serve the static files from /static.
+The collection of static files is done automatically as part of the deployment script, clearing previously collected files. This means the collection occurs on every deployment, slowing down deployment a bit, but it ensures that obsolete files won't be available, avoiding a potential security issue.
+If you want to skip collection of static files for your Django application:
+\.skipDjango
+Then you'll need to do the collection manually on your local machine:
+env\scripts\python manage.py collectstatic
+Then remove the \static folder from .gitignore and add it to the Git repository.
+
 
 {% endblock %}

@@ -40,3 +40,57 @@ input[type="checkbox"].input-validation-error {
 .validation-summary-valid {
     display: none;
 }
+
+.note_box {
+    font-style: italic;
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.icon {
+    width: 33px;
+}
+
+.tut_img {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    max-width: 1024px;
+}
+
+.phone_screenshot {
+    display: block;
+    padding: 15px;
+    width: 400px;
+}
+
+
+body {
+    max-width: 1024px;
+    margin: auto;
+    width: 80%;
+    font-family: "Segoe UI", "Segoe UI Web", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial,sans-serif;
+    font-size: 18px;
+}
+
+h1 {
+    font-weight: 200;
+    margin-bottom: 0;
+}
+
+h2 {
+    color: rgb(66, 128, 188);
+    font-weight: normal;
+    margin-top: 50px;
+}
+
+h3 {
+    color: rgb(66, 128, 188); 
+    font-weight: normal;
+    margin-top: 50px;
+}
+
+p {
+    margin-top: 23px;
+}
