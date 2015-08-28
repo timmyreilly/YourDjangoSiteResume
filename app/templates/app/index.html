@@ -121,7 +121,10 @@ cd https://github.com/atxryan/DjangoCon </code></pre>
     Install the external packages required by your application. In our case, the only requirement is Django. You can use the requirements.txt file at the root of the repository to install the packages in your virtual environment:
 <pre><code>env/bin/pip install -r requirements.txt</code></pre>
 
+<p>You can launch the application under a local development server with the following command:</p>
+<pre><code>env\scripts\python manage.py runserver</code></pre>
 </div>
+
 <h4 class="instructions_header" data-for-block="env-visual-studio"> &#8702; Visual Studio instructions<span>(click to expand)</span></h4>
 <div class="instructions" data-instruction-block="env-visual-studio">
     <p>We'll be using <a href="https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx">Visual Studio Community 2015</a>. Get it for free! Make sure you have the Python Tools for Visual Studio installed.</p>
@@ -160,8 +163,11 @@ cd https://github.com/atxryan/DjangoCon </code></pre>
 
 
 <h3>Modify with your own information</h3>
-
 [TBD]
+<p>After you've tested your changes, commit them to the Git repository:</p>
+<pre><code>git add .
+git commit -m "your commit message"</code></pre>
+
 
 <h3>Deploy the Web App to Azure</h3>
 <p>Going back to the Azure Portal, we can now push our code to Azure. There are many ways to deploy code to Azure, but for now we'll focus on using Git.</p>
