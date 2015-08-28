@@ -94,3 +94,10 @@ h3 {
 p {
     margin-top: 23px;
 }
+hr {
+    clear: both;
+}
+#azure_challenge_badge {
+    float: right;
+    margin-left: 15px;
+}
