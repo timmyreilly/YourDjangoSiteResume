@@ -16,55 +16,12 @@ textarea {
     max-width: 280px;
 }
 
-/* styles for validation helpers */
-.field-validation-error {
-    color: #b94a48;
-}
-
-.field-validation-valid {
-    display: none;
-}
-
-input.input-validation-error {
-    border: 1px solid #b94a48;
-}
-
-input[type="checkbox"].input-validation-error {
-    border: 0 none;
-}
-
-.validation-summary-errors {
-    color: #b94a48;
-}
-
-.validation-summary-valid {
-    display: none;
-}
-
 .note_box {
     font-style: italic;
     border: 1px solid black;
     padding: 10px;
     margin-bottom: 15px;
 }
-
-.icon {
-    width: 33px;
-}
-
-.tut_img {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    max-width: 1024px;
-}
-
-.phone_screenshot {
-    display: block;
-    padding: 15px;
-    width: 400px;
-}
-
 
 body {
     max-width: 1024px;
@@ -100,4 +57,17 @@ hr {
 #azure_challenge_badge {
     float: right;
     margin-left: 15px;
+}
+
+.wide_screenshot {
+    width: 500px;
+}
+.narrow_screenshot {
+    width: 250px;
+}
+.wide_screenshot:hover, .narrow_screenshot:hover {
+    width: auto;
+}
+.instructions {
+    display: none;
 }
