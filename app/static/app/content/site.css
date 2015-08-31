@@ -9,65 +9,8 @@
     padding-right: 15px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
 
-.note_box {
-    font-style: italic;
-    border: 1px solid black;
-    padding: 10px;
-    margin-bottom: 15px;
-}
-
-body {
-    max-width: 1024px;
-    margin: auto;
-    width: 80%;
-    font-family: "Segoe UI", "Segoe UI Web", "Segoe UI Symbol", "Helvetica Neue", "BBAlpha Sans", "S60 Sans", Arial,sans-serif;
-    font-size: 18px;
-}
-
-h1 {
-    font-weight: 200;
-    margin-bottom: 0;
-}
-
-h2 {
-    color: rgb(66, 128, 188);
-    font-weight: normal;
-    margin-top: 50px;
-}
-
-h3 {
-    color: rgb(66, 128, 188); 
-    font-weight: normal;
-    margin-top: 50px;
-}
-
-p {
-    margin-top: 23px;
-}
-hr {
-    clear: both;
-}
 #azure_challenge_badge {
     float: right;
     margin-left: 15px;
-}
-
-.wide_screenshot {
-    width: 500px;
-}
-.narrow_screenshot {
-    width: 250px;
-}
-.wide_screenshot:hover, .narrow_screenshot:hover {
-    width: auto;
-}
-.instructions {
-    display: none;
 }
