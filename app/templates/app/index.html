@@ -9,15 +9,4 @@
 <h2>THIS IS FREAKING AMAZING!!!</h2>
 
 
-
-    {% endblock %}
-
-    {% block scripts %}
-    <script>
-    $(document).ready(function () {
-        $("h4.instructions_header").click(function () {
-            $("div[data-instruction-block=" + $(this).attr("data-for-block") + "]").show();
-        });
-    });
-    </script>
-    {% endblock %}
+{% endblock %}
