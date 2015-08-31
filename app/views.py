@@ -19,4 +19,16 @@ def home(request):
             'year':datetime.now().year,
         })
     )
-    
+
+def me(request):
+    assert isinstance(request, HttpRequest)
+    return render(
+        request, 
+        'app/me.html',
+        context_instance = RequestContext(request, 
+            {
+                'name': 'Timothy',
+                'age': '23',
+                'year': datetime.now().year,
+            })
+    )
