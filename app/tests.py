@@ -20,4 +20,4 @@ class ViewTest(TestCase):
     def test_home(self):
         """Tests the home page."""
         response = self.client.get('/')
-        self.assertContains(response, 'Home Page', 1, 200)
+        self.assertContains(response, 'DjangoCon', 1, 200)
