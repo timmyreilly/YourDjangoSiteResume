@@ -28,7 +28,7 @@ def anotherpage(request):
         context_instance = RequestContext(request, 
             {
                 'name': 'Timothy',
-                'age': '23',
+                'twitter': '@timmyreilly',
                 'year': datetime.now().year,
             })
     )
