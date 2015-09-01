@@ -23,16 +23,19 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'anotherpage' %}">Another Page</a></li>
                 </ul>
             </div>
         </div>
     </div>
+    
+
 
     <div class="container body-content">
         {% block content %}{% endblock %}
         <hr />
         <footer>
-            <p>&copy; {{ year }}</p>
+            <p>&copy; {{ year }} -- <a href="http://djangocon.azurewebsites.net/">Still confused?</a> -- <a href="{% url 'anotherpage' %}">Contact Us</a> </p>
         </footer>
     </div>
 
@@ -47,7 +50,6 @@
         }({
             instrumentationKey:"be2c3904-602e-410b-8898-979ad77938dd"
         });
-
         window.appInsights=appInsights;
         appInsights.trackPageView();
     </script>

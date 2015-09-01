@@ -2,6 +2,7 @@
 
 {% block content %}
 
+<<<<<<< HEAD
 <h1>DjangoCon 2015 Microsoft deployment challenge!</h1>
 
 <img src="/static/app/images/azure_code_challenge_small.png" id="azure_challenge_badge" />
@@ -124,85 +125,15 @@ cd https://github.com/atxryan/DjangoCon </code></pre>
 
 <p>You can launch the application under a local development server with the following command:</p>
 <pre><code>env\scripts\python manage.py runserver</code></pre>
+=======
+<div class="jumbotron">
+	<h1>Welcome to <a href="https://www.djangoproject.com/">Django</a> on <a href="http://azure.microsoft.com/en-us/services/">Azure</a></h1>
+>>>>>>> minimal
 </div>
 
-<h4 class="instructions_header" data-for-block="env-visual-studio"> &#8702; Visual Studio instructions<span>(click to expand)</span></h4>
-<div class="instructions" data-instruction-block="env-visual-studio">
-    <p>We'll be using <a href="https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx">Visual Studio Community 2015</a>. Get it for free! Make sure you have the Python Tools for Visual Studio installed.</p>
-
-    <ol>
-        <li>
-            Choose <strong>File > New Project</strong> and select Python templates. Choose "From Existing Python Code". Where this project is saved is not important. We will choose our existing code on the next step.<br />
-            <img src="/static/app/images/vs1.png" class="wide_screenshot" />
-        </li>
-        <li>
-            Select the location of the cloned GitHub repo.<br />
-            <img src="/static/app/images/vs2.png" class="wide_screenshot" />
-        </li>
-        <li>
-            Select <strong>Customize Project Type</strong> and choose <strong>Django Web Project</strong>. The .pyproj file that is created will tell Visual Studio how to run your app.<br />
-            <img src="/static/app/images/vs4.png" class="wide_screenshot" /><br>
-        </li>
-        <li>
-            Leave the virtual environment name as "env". Ensure the correct Python interpreter is chosen. If unsure, just leave it as 2.7. Check the option to install packages from requirements.txt. <br />
-            <img src="/static/app/images/vs5.png" class="narrow_screenshot" /><br>
-        </li>
-        <li>
-            Once the solution is created and imported into Visual Studio, right click on Python Environments. Choose "Add Virtual Environment..."<br />
-            <img src="/static/app/images/vs6.png" class="wide_screenshot" /><br>
-        </li>
-        <li>
-            Lastly, we need to change where Visual Studio looking for the settings.py module. Right click on the project name (under the solution name) in Solution Explorer and choose <strong>Properties</strong>. Next we choose the Django settings and change the Settings Module field to "djangocon.settings".<br />
-            <img src="/static/app/images/vs7.png" class="wide_screenshot" /><br>
-        </li>
-        <li>
-            That's it. Simply hit F5 or click the run button to begin the build process and launch the app in a browser.
-            <img src="/static/app/images/vs8.png" class="wide_screenshot" /><br>
-        </li>
-    </ol>
-</div>
+<h1>Welcome to your blank canvas</h1>
 
 
-<h3>Modify with your own information</h3>
-[TBD]
-<p>After you've tested your changes, commit them to the Git repository:</p>
-<pre><code>git add .
-git commit -m "your commit message"</code></pre>
+<!--<img src="/static/app/images/azure_code_challenge_small.png" id="azure_challenge_badge" />-->
 
-
-<h3>Deploy the Web App to Azure</h3>
-<p>Going back to the Azure Portal, we can now push our code to Azure. There are many ways to deploy code to Azure, but for now we'll focus on using Git.</p>
-<p>Navigate to your web app in the portal by clicking the tile on your portal's home screen or by finding it under <strong>Browse All > Web App</strong>. Once on your web app's page, scroll down to the bottom to setup Continous Deployment. Choose either GitHub or Local Git Repository.</p>
-<img src="/static/app/images/continous_deployment.png" class="wide_screenshot" />
-
-<p>If you chose GitHub, simply authenticate with your Azure credentials and choose your DjangoCon project. Notice that you can select branch configuration as well if you want to use this for dev or staging. Azure will listen for changes on this repo and kick off a deployment anytime a commit is pushed.</p>
-<img src="/static/app/images/deploy_github.png" class="narrow_screenshot" />
-
-<p>If you chose Local Git Repository, an empty Git repo will be provisioned for your web app. You'll need to get the URL of this repo to add it as a remote for your local copy. Click on <strong>Settings > Properties</strong> and copy your Git URL.</p>
-<img src="/static/app/images/deploy_localgit.png" class="wide_screenshot" />
-
-<p>After you copy the URL, open up your command prompt and navigate to your local project. Add Azure as a remote and do a push.</p>
-<pre><code>git remote add azure YOUR_GIT_URL
-git push azure master</code></pre>
-
-<p>No matter which method you chose, Azure will have grabbed the latest version of your web app and started the deployment. You can always see the status of deployments and view the log. Go ahead and take a look. You'll see that Azure figured out that this is a Python project, detected which Python runtime to use, installed a virtual enviroment, pip installed Django from requirements.txt, collected static files, and more.</p>
-<img src="/static/app/images/deploy_details.png" class="narrow_screenshot" />
-
-<h2>Congrats! You've just deployed your app to Azure!</h2>
-<p>Come by the Microsoft booth for your awesome t-shirt.</p>
-<p>
-    You can find additional resources and infomation about Azure deployments <a href="/additional_resources">here</a>.
-
-
-
-    {% endblock %}
-
-    {% block scripts %}
-    <script>
-    $(document).ready(function () {
-        $("h4.instructions_header").click(function () {
-            $("div[data-instruction-block=" + $(this).attr("data-for-block") + "]").show();
-        });
-    });
-    </script>
-    {% endblock %}
+{% endblock %}

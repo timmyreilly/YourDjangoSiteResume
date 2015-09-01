@@ -19,17 +19,16 @@ def home(request):
             'year':datetime.now().year,
         })
     )
-    
-def additional_resources(request):
-    """Renders the home page."""
+
+def anotherpage(request):
     assert isinstance(request, HttpRequest)
     return render(
-        request,
-        'app/additional_resources.html',
-        context_instance = RequestContext(request,
-        {
-            'title':'Additional resources',
-            'year':datetime.now().year,
-        })
+        request, 
+        'app/anotherpage.html',
+        context_instance = RequestContext(request, 
+            {
+                'name': 'Timothy',
+                'twitter': '@timmyreilly',
+                'year': datetime.now().year,
+            })
     )
-
