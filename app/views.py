@@ -20,11 +20,11 @@ def home(request):
         })
     )
 
-def me(request):
+def anotherpage(request):
     assert isinstance(request, HttpRequest)
     return render(
         request, 
-        'app/me.html',
+        'app/anotherpage.html',
         context_instance = RequestContext(request, 
             {
                 'name': 'Timothy',

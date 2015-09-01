@@ -23,11 +23,13 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'me' %}">Me</a></li>
+                    <li><a href="{% url 'anotherpage' %}">Another Page</a></li>
                 </ul>
             </div>
         </div>
     </div>
+    
+
 
     <div class="container body-content">
         {% block content %}{% endblock %}
@@ -48,7 +50,6 @@
         }({
             instrumentationKey:"be2c3904-602e-410b-8898-979ad77938dd"
         });
-
         window.appInsights=appInsights;
         appInsights.trackPageView();
     </script>
