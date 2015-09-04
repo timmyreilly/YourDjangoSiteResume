@@ -12,9 +12,10 @@ from django.conf.urls import patterns, url
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'app.views.home', name='home'),
+    url(r'^home', 'app.views.home', name='home'),
     url(r'^anotherpage/', 'app.views.anotherpage', name='anotherpage'),
     url(r'^freelancer/', 'app.views.freelancer', name='freelancer'),
+    url(r'^$', 'app.views.base', name='base'),
     # url(r'^additional_resources/', 'app.views.additional_resources', name='additional_resources'),
 
     # Uncomment the admin/doc line below to enable admin documentation:

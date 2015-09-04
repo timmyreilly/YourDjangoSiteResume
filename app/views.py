@@ -33,7 +33,35 @@ def anotherpage(request):
             })
     )
     
-
+def base(request):
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/base.html',
+        context_instance = RequestContext(request,
+            {
+                'title': 'Title',
+                'left_header': 'Your Name',
+                'header_right_one': 'Portfolio',
+                'header_right_two': 'About',
+                'header_right_three': 'Contact',
+                
+                'main': 'What This Is',
+                'secondary': 'What you do',
+                'tertiary': 'What are we doing?',
+                
+                'portfolio_main': 'Things I\'ve done',
+                
+                'about_main': 'About',
+                
+                'contact_main': 'Say Hi',    
+                'email': 'you@email.com',
+                'twitter': '@yourtwitter',
+                'number': '503-555-YOU1',
+                
+                'year': datetime.now().year,
+            })
+    )
     
 def freelancer(request):
     assert isinstance(request, HttpRequest)
