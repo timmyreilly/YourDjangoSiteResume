@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }} - DjangoCon 2015</title>
     {% load staticfiles %}
+    
+    
+    
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/bootstrap.min.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'app/content/site.css' %}" />
     <script src="{% static 'app/scripts/modernizr-2.6.2.js' %}"></script>
@@ -24,7 +27,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'home' %}">Home</a></li>
                     <li><a href="{% url 'anotherpage' %}">Another Page</a></li>
-                    <li><a href="{% url 'freelancer' %}">Freelancer Resume Example</a></li>
+                    <li><a href="{% url 'freelancer' %}">Freelancer</a></li>
                 </ul>
             </div>
         </div>
