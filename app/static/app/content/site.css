@@ -14,3 +14,26 @@
     float: right;
     margin-left: 15px;
 }
+
+header {
+    background-color: #238AB4;
+}
+
+footer .footer-above {
+    background-color: #238AB4;
+}
+
+
+section.success {
+    color: #fff;
+    background: #238AB4;
+}
+
+
+/*
+Dark Blue: 238AB4
+Turquoise: 45B39C
+Yellow: EFC84A
+Orange: D97940
+Red: BD3E25
+*/

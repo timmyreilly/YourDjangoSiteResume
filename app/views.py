@@ -33,6 +33,7 @@ def anotherpage(request):
             })
     )
     
+
     
 def freelancer(request):
     assert isinstance(request, HttpRequest)
@@ -43,6 +44,17 @@ def freelancer(request):
             {
                 'your_name': 'Tim',
                 'allyou': 'Title',
+                'email': 'you@email.com',
+                'twitter': '@yourtwitter',
+                'number': '503-555-YOU1',
                 
             })
     )
+    
+    
+# def freelancer(request):
+#     assert isinstance(request, HttpRequest)
+#     
+#     return render('app/freelancer.html', {
+#         'your_name': 'Timbo'
+#     })
