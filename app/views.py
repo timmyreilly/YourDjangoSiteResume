@@ -42,7 +42,7 @@ def freelancer(request):
         'app/freelancer.html',
         context_instance = RequestContext(request,
             {
-                'your_name': 'Tim',
+                'your_name': 'Your Name',
                 'allyou': 'Title',
                 'email': 'you@email.com',
                 'twitter': '@yourtwitter',
