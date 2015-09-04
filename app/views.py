@@ -32,3 +32,15 @@ def anotherpage(request):
                 'year': datetime.now().year,
             })
     )
+    
+    
+def freelancer(request):
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/freelancer.html',
+        context_instance = RequestContext(request,
+            {
+                'name': 'Tim'
+            })
+    )
