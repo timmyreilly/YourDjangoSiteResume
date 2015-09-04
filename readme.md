@@ -7,7 +7,9 @@
 Deploy this site to azure and edit the view.py file to enter the Code Challenge. 
 
 The site with the most traffic at the end of the week wins a surface pro 3. 
-If you an would like even lighter deployment deploy this repo: [MinimalStaticDjango](https://github.com/timmyreilly/MinimalStaticDjango)
+If you an would like even lighter deployment deploy check out this repo: 
+
+[https://github.com/timmyreilly/MinimalStaticDjango](https://github.com/timmyreilly/MinimalStaticDjango)
 
 
 If you're still not what sure to do visit this [page](http://djangocon.azurewebsites.net/) or contact us on twitter or the Microsoft booth. 
