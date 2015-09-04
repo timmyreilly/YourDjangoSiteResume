@@ -41,6 +41,8 @@ def freelancer(request):
         'app/freelancer.html',
         context_instance = RequestContext(request,
             {
-                'name': 'Tim'
+                'your_name': 'Tim',
+                'allyou': 'Title',
+                
             })
     )

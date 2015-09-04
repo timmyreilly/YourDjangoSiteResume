@@ -11,7 +11,7 @@
     
     {% load staticfiles %}
 
-    <title>Freelancer - Start Bootstrap Theme</title>
+    <title>{{ title }}</title>
 
     <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
@@ -51,7 +51,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <a class="navbar-brand" href="#page-top">{{ your_name }} </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -83,9 +83,9 @@
                 <div class="col-lg-12">
                     <img class="img-responsive" src="{% static 'app/img/profile.png' %}" alt="">
                     <div class="intro-text">
-                        <span class="name">Start Bootstrap</span>
+                        <span class="name">Your Resume</span>
                         <hr class="star-light">
-                        <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                        <span class="skills">What do you do?</span>
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
+                    <h2>Things I've Done</h2>
                     <hr class="star-primary">
                 </div>
             </div>
@@ -190,14 +190,30 @@
             </div>
         </div>
     </section>
-
-    <!-- Contact Section -->
+    
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Contact Me</h2>
+                    <h2>Say Hi</h2>
                     <hr class="star-primary">
+                    <div class="row">
+                        <div class="col-lg-4 col-lg-offset-2">
+                            <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files
+                                including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                        </div>
+                        <div class="col-lg-4">
+                            <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist
+                                looking to share your projects, this template is the perfect starting point!</p>
+                        </div>    
+
+    <!-- Contact Section -->
+    <!--
+        <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Contact Me</h2>
                 </div>
             </div>
             <div class="row">
@@ -251,31 +267,11 @@
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-4">
+                    <div class="footer-col col-md-6">
                         <h3>Location</h3>
                         <p>3481 Melrose Place<br>Beverly Hills, CA 90210</p>
                     </div>
-                    <div class="footer-col col-md-4">
-                        <h3>Around the Web</h3>
-                        <ul class="list-inline">
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="footer-col col-md-4">
+                    <div class="footer-col col-md-6">
                         <h3>About Freelancer</h3>
                         <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
                     </div>
