@@ -29,6 +29,21 @@ section.success {
     background: #238AB4;
 }
 
+a,
+a:hover,
+a:focus,
+a:active,
+a.active {
+    outline: 0;
+    color: #BD3E25;
+}
+
+footer .footer-below {
+    padding: 25px 0;
+    background-color: #BD3E25;
+}
+
+
 
 /*
 Dark Blue: 238AB4
