@@ -6,7 +6,7 @@
 
 This is a minimal website for your imagination to take over. 
 
-Turn this website into whatever captivates you and drive traffic during the week to win a new Surface Pro 3. 
+Turn this website into whatever captivates you and drive traffic during the week to win a new Surface Pro 3 or just deploy the site. Edit view.py and come by the booth and get a shirt!
 
 If you're still not what sure to do visit this [page](http://djangocon.azurewebsites.net/) or contact us on twitter or the Microsoft booth. 
 
