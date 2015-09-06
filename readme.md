@@ -1,13 +1,11 @@
 # DjangoCon 2015 Azure Challenge
 
-
-
 # [Resume Starter Site](http://youdjangositeresume.azurewebsites.net/)
 
-Deploy this site to azure and edit the view.py file to enter the Code Challenge. 
+Deploy this site to azure and edit the ```view.py``` file to enter the [Azure DjangoCon Code Challenge](http://djangocon.azurewebsites.net/). 
 
-The site with the most traffic at the end of the week wins a surface pro 3. 
-If you an would like even lighter deployment deploy check out this repo: 
+The site with the most traffic at the end of the week wins a Dell Venue Pro. 
+If you would like even lighter deployment check out this repo: 
 
 [https://github.com/timmyreilly/MinimalStaticDjango](https://github.com/timmyreilly/MinimalStaticDjango)
 

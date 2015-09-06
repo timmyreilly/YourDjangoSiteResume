@@ -11,12 +11,8 @@ from django.conf.urls import patterns, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    # Examples:
-    url(r'^home', 'app.views.home', name='home'),
-    url(r'^anotherpage/', 'app.views.anotherpage', name='anotherpage'),
-    url(r'^freelancer/', 'app.views.freelancer', name='freelancer'),
-    url(r'^$', 'app.views.base', name='base'),
-    # url(r'^additional_resources/', 'app.views.additional_resources', name='additional_resources'),
+
+    url(r'^$', 'app.views.home', name='home'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

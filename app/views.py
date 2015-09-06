@@ -7,82 +7,23 @@ from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
 
-def home(request):
-    """Renders the home page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/index.html',
-        context_instance = RequestContext(request,
-        {
-            'title':'Microsoft Code Challege',
-            'year':datetime.now().year,
-        })
-    )
-
-def anotherpage(request):
-    assert isinstance(request, HttpRequest)
-    return render(
-        request, 
-        'app/anotherpage.html',
-        context_instance = RequestContext(request, 
-            {
-                'name': 'Timothy',
-                'twitter': '@timmyreilly',
-                'year': datetime.now().year,
-            })
-    )
+YOUR_INFO = {
+    'name' : 'Your name',
+    'bio' : 'What\'s your deal? What do you do?',
+    'email' : '', # Leave blank if you'd prefer not to share your email with other conference attendees
+    'twitter_username' : 'tweettweet', # No @ symbol, just the handle.
+    'github_username' : "fetchpush", 
+    'headshot_url' : '', # Link to your GitHub, Twitter, or Gravatar profile image.
+}
     
-def base(request):
+def home(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
         'app/base.html',
         context_instance = RequestContext(request,
             {
-                'title': 'Title',
-                'left_header': 'Your Name',
-                'header_right_one': 'Portfolio',
-                'header_right_two': 'About',
-                'header_right_three': 'Contact',
-                
-                'main': 'What This Is',
-                'secondary': 'What you do',
-                'tertiary': 'What are we doing?',
-                
-                'portfolio_main': 'Things I\'ve done',
-                
-                'about_main': 'About',
-                
-                'contact_main': 'Say Hi',    
-                'email': 'you@email.com',
-                'twitter': '@yourtwitter',
-                'number': '503-555-YOU1',
-                
+                'attendee' : YOUR_INFO,    
                 'year': datetime.now().year,
             })
     )
-    
-def freelancer(request):
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/freelancer.html',
-        context_instance = RequestContext(request,
-            {
-                'your_name': 'Your Name',
-                'allyou': 'Title',
-                'email': 'you@email.com',
-                'twitter': '@yourtwitter',
-                'number': '503-555-YOU1',
-                
-            })
-    )
-    
-    
-# def freelancer(request):
-#     assert isinstance(request, HttpRequest)
-#     
-#     return render('app/freelancer.html', {
-#         'your_name': 'Timbo'
-#     })
