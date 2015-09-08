@@ -21,7 +21,7 @@ If you're still not what sure to do visit this [page](http://djangocon.azurewebs
 
 # Examples from DjangoCon
 
-Check out these awesome examples: 
+### Check out these awesome examples: 
 
 - [Cat Pic](http://dailycatpic.azurewebsites.net/)
 - [Health Recommendations](http://djangocon-us-2015.azurewebsites.net/) + [Repo](https://github.com/karthikbgl/YourDjangoSiteResume)
